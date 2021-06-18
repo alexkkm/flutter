@@ -1,0 +1,33 @@
+name of the project:
+D:\vscode\flutter\pubspec.yaml
+D:\vscode\flutter\README.md
+D:\vscode\flutter\android\app\src\main\AndroidManifest.xml:	
+	4,24:         android:label="flutter_learning"
+
+
+name of the package: com.example.flutter_learning
+D:\vscode\flutter\android\app\build.gradle
+	37,24:         applicationId "com.example.flutter_learning"
+D:\vscode\flutter\android\app\src\debug\AndroidManifest.xml
+	2,14:     package="com.example.flutter_learning">
+D:\vscode\flutter\android\app\src\main\AndroidManifest.xml:
+	2,14:     package="com.example.flutter_learning">
+D:\vscode\flutter\android\app\src\main\kotlin\com\example\flutter_learning\MainActivity.kt
+	1,9: package com.example.flutter_learning
+D:\vscode\flutter\android\app\src\profile\AndroidManifest.xml
+	2,14:     package="com.example.flutter_learning">
+D:\vscode\flutter\ios\Runner.xcodeproj\project.pbxproj
+	294,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;
+	418,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;
+	437,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;
+
+
+name of the app:
+D:\vscode\flutter\ios\Runner\Info.plist
+	14,10: 	<string>flutter_learning</string>
+D:\vscode\flutter\web\index.html
+  	23,52:   <meta name="apple-mobile-web-app-title" content="flutter_learning">
+  	26,10:   <title>flutter_learning</title>
+D:\vscode\flutter\web\manifest.json
+	2,14:     "name": "flutter_learning",
+	3,20:     "short_name": "flutter_learning",
