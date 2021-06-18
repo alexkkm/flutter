@@ -3,7 +3,7 @@
 
    <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_learning"
+        android:label="Flutter"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

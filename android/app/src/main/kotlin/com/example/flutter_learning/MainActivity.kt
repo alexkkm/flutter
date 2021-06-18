@@ -19,7 +19,7 @@ class MainActivity : FlutterActivity() {
   override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
     super.configureFlutterEngine(flutterEngine)
     MethodChannel(flutterEngine.dartExecutor.binaryMessenger,
-            "com.example.readinglist").setMethodCallHandler { call, result ->
+            "com.example.flutter_learning").setMethodCallHandler { call, result ->
               if (call.method == "getSharedData") {
                 handleIntent()
                 result.success(sharedData)
