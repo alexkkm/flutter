@@ -1,5 +1,5 @@
 flutter pub add flutter_local_notifications
-flutter pub get flutter_local_notifications
+flutter pub add timezone
 
 Android\app\src\profile\AndroidManifest.xml:
 <uses-permission android:name="android.permission.VIBRATE" />
