@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
-        0, 'plain title', 'plain body', platformChannelSpecifics,
+        0, 'Notification title', 'Notification body', platformChannelSpecifics,
         payload: 'item x');
   }
 
@@ -57,8 +57,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Center(
       child: TextButton(
-        child: Text("Textbutton"),
-        onPressed: _showNotification,
+        child: Text("Notification"),
+        onPressed: () async {
+          await _showNotification();
+          debugPrint("Pressed Textbutton");
+        },
       ),
     );
   }
