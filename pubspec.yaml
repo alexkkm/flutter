@@ -36,6 +36,7 @@ dependencies:
   dio: ^4.0.0
   receive_sharing_intent: ^1.4.5
   intl: ^0.17.0
+  flutter_local_notifications: ^6.0.0
 
 
 dev_dependencies:

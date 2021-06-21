@@ -1,0 +1,6 @@
+flutter pub add flutter_local_notifications
+flutter pub get flutter_local_notifications
+
+Android\app\src\profile\AndroidManifest.xml:
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
