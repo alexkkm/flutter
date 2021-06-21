@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+// ignore: unused_import
+import 'package:timezone/data/latest.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
 
 void main() => runApp(MyApp());
 
@@ -52,15 +55,43 @@ class _HomePageState extends State<HomePage> {
         .show(0, title, content, platformChannelSpecifics, payload: 'item x');
   }
 
+  Future<void> _zonedScheduleNotification(
+      int numberOfSeconds, String title, String content) async {
+    await flutterLocalNotificationsPlugin.zonedSchedule(
+        0,
+        title,
+        content,
+        tz.TZDateTime.now(tz.local).add(Duration(seconds: numberOfSeconds)),
+        const NotificationDetails(
+            android: AndroidNotificationDetails('your channel id',
+                'your channel name', 'your channel description')),
+        androidAllowWhileIdle: true,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: TextButton(
-        child: Text("Notification"),
-        onPressed: () async {
-          await _showNotification("Notification Title", "Notification Content");
-          debugPrint("Pressed Textbutton");
-        },
+      child: Column(
+        children: <Widget>[
+          TextButton(
+            child: Text("Single Notification"),
+            onPressed: () async {
+              await _showNotification(
+                  "Notification Title", "Notification Content");
+              debugPrint("Pressed Single Notification");
+            },
+          ),
+          TextButton(
+            child: Text("Notification"),
+            onPressed: () async {
+              await _zonedScheduleNotification(
+                  5, "Scheduled Title", "Scheduled Content");
+              debugPrint("Pressed Scheduled");
+            },
+          ),
+        ],
       ),
     );
   }
