@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Future<void> _showNotification() async {
+  Future<void> _showNotification(String title, String content) async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
             'your channel id', 'your channel name', 'your channel description',
@@ -48,9 +48,8 @@ class _HomePageState extends State<HomePage> {
             ticker: 'ticker');
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
-    await flutterLocalNotificationsPlugin.show(
-        0, 'Notification title', 'Notification body', platformChannelSpecifics,
-        payload: 'item x');
+    await flutterLocalNotificationsPlugin
+        .show(0, title, content, platformChannelSpecifics, payload: 'item x');
   }
 
   @override
@@ -59,7 +58,7 @@ class _HomePageState extends State<HomePage> {
       child: TextButton(
         child: Text("Notification"),
         onPressed: () async {
-          await _showNotification();
+          await _showNotification("Notification Title", "Notification Content");
           debugPrint("Pressed Textbutton");
         },
       ),
