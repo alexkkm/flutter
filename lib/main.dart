@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('change-page'),
+          title: Text('Basic'),
         ),
         body: HomePage(),
       ),
