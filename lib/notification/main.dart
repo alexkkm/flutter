@@ -62,11 +62,16 @@ class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
           },
           child: Text("5 Seconds"),
         ),
+        TextButton(
+            onPressed: () {
+              cancelAllNotifications();
+            },
+            child: Text("Cancel All"))
       ],
     );
   }
 
-  //function for creating Notification with specific
+  //Creating Notification with specific
   //channel ID, notification title, notification content, notification trigger time
   Future<void> createNotification(
       String channelID, String title, String content, DateTime dateTime) async {
@@ -82,5 +87,10 @@ class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
         androidAllowWhileIdle: true);
+  }
+
+  //Cancel all Notification
+  Future<void> cancelAllNotifications() async {
+    await notificationsPlugin.cancelAll();
   }
 }
