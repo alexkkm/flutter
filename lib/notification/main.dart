@@ -37,6 +37,7 @@ class LocalNotificationDemo extends StatefulWidget {
 }
 
 class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
+  //initialize the Android and IOS setting and also the timezone
   @override
   void initState() {
     initializeSetting();
