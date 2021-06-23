@@ -21,6 +21,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//function for initialize Android and IOS setting for Notification Plugin
+void initializeSetting() async {
+  var initializeAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
+  var initializeSetting = InitializationSettings(android: initializeAndroid);
+  await notificationsPlugin.initialize(initializeSetting);
+}
+
 FlutterLocalNotificationsPlugin notificationsPlugin =
     FlutterLocalNotificationsPlugin();
 
@@ -76,10 +83,4 @@ class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
             UILocalNotificationDateInterpretation.absoluteTime,
         androidAllowWhileIdle: true);
   }
-}
-
-void initializeSetting() async {
-  var initializeAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
-  var initializeSetting = InitializationSettings(android: initializeAndroid);
-  await notificationsPlugin.initialize(initializeSetting);
 }
