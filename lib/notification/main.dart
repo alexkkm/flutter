@@ -49,6 +49,7 @@ class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
+        Text(DateTime.now().toString()),
         TextButton(
           onPressed: () {
             createNotification("1", "1 sec notification", "1 sec content",
