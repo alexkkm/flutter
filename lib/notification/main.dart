@@ -37,6 +37,9 @@ class LocalNotificationDemo extends StatefulWidget {
 }
 
 class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
+  String str = '2021-06-24 10:30:30';
+  DateTime time = DateTime(2021, 6, 24, 10, 38, 30);
+
   //initialize the Android and IOS setting and also the timezone
   @override
   void initState() {
@@ -53,14 +56,14 @@ class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
         TextButton(
           onPressed: () {
             createNotification("1", "1 sec notification", "1 sec content",
-                DateTime.now().add(const Duration(seconds: 1)));
+                DateTime.now().add(const Duration(seconds: 5)));
           },
           child: Text("DateTime"),
         ),
         TextButton(
           onPressed: () {
-            createNotification("1", "Title", "Content",
-                DateTime.now().add(const Duration(seconds: 5)));
+            createNotification("2", "Title", "Content",
+                DateTime.now().add(const Duration(seconds: 10)));
           },
           child: Text("5 Seconds"),
         ),
