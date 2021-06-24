@@ -6,8 +6,7 @@ class NotificationService extends ChangeNotifier {
   final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
 
-  //initilize
-
+  //initilization for notificationsPlgin
   Future initialize() async {
     FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
         FlutterLocalNotificationsPlugin();
@@ -39,14 +38,8 @@ class NotificationService extends ChangeNotifier {
         payload: "Welcome to demo app");
   }
 
-  //Cancel notification
-
-  Future cancelAllNotification() async {
-    await _flutterLocalNotificationsPlugin.cancelAll();
-  }
-
   //Creating Notification with specific
-  //channel ID, notification title, notification content, notification trigger time
+  //notification ID, notification title, notification content, notification trigger time
   Future<void> createNotification(
       int id, String title, String content, DateTime dateTime) async {
     await _flutterLocalNotificationsPlugin.schedule(
@@ -59,5 +52,10 @@ class NotificationService extends ChangeNotifier {
               'channel id', 'channel name', 'channel description'),
         ),
         androidAllowWhileIdle: true);
+  }
+
+  //Cancel notification
+  Future cancelAllNotification() async {
+    await _flutterLocalNotificationsPlugin.cancelAll();
   }
 }
