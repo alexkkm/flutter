@@ -39,31 +39,6 @@ class NotificationService extends ChangeNotifier {
         payload: "Welcome to demo app");
   }
 
-  //Scheduled Notification
-
-  Future scheduledNotification() async {
-    var interval = RepeatInterval.everyMinute;
-    var bigPicture = BigPictureStyleInformation(
-        DrawableResourceAndroidBitmap("@mipmap/ic_launcher"),
-        largeIcon: DrawableResourceAndroidBitmap("@mipmap/ic_launcher"),
-        contentTitle: "Demo image notification",
-        summaryText: "This is some text",
-        htmlFormatContent: true,
-        htmlFormatContentTitle: true);
-
-    var android = AndroidNotificationDetails("id", "channel", "description",
-        styleInformation: bigPicture);
-
-    var platform = new NotificationDetails(android: android);
-
-    await _flutterLocalNotificationsPlugin.periodicallyShow(
-        0,
-        "Demo Sheduled notification",
-        "Tap to do something",
-        interval,
-        platform);
-  }
-
   //Cancel notification
 
   Future cancelAllNotification() async {
