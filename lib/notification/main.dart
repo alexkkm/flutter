@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:timezone/timezone.dart' as tz;
-import 'package:timezone/data/latest.dart' as tz;
+import 'services/notification.dart';
+import 'views/home_view.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,92 +10,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Local Notification'),
+    return MultiProvider(
+        child: MaterialApp(
+          theme: ThemeData(fontFamily: 'Monteserat'),
+          home: HomePage(),
+          debugShowCheckedModeBanner: false,
         ),
-        body: LocalNotificationDemo(),
-      ),
-    );
-  }
-}
-
-//function for initialize Android and IOS setting for Notification Plugin
-void initializeSetting() async {
-  var initializeAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
-  var initializeSetting = InitializationSettings(android: initializeAndroid);
-  await notificationsPlugin.initialize(initializeSetting);
-}
-
-FlutterLocalNotificationsPlugin notificationsPlugin =
-    FlutterLocalNotificationsPlugin();
-
-class LocalNotificationDemo extends StatefulWidget {
-  @override
-  _LocalNotificationDemoState createState() => _LocalNotificationDemoState();
-}
-
-class _LocalNotificationDemoState extends State<LocalNotificationDemo> {
-  String str = '2021-06-24 10:30:30';
-  DateTime time = DateTime(2021, 6, 24, 10, 38, 30);
-
-  //initialize the Android and IOS setting and also the timezone
-  @override
-  void initState() {
-    initializeSetting();
-    tz.initializeTimeZones();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Text(DateTime.now().toString()),
-        TextButton(
-          onPressed: () {
-            createNotification("1", "1 sec notification", "1 sec content",
-                DateTime.now().add(const Duration(seconds: 5)));
-          },
-          child: Text("DateTime"),
-        ),
-        TextButton(
-          onPressed: () {
-            createNotification("2", "Title", "Content",
-                DateTime.now().add(const Duration(seconds: 10)));
-          },
-          child: Text("5 Seconds"),
-        ),
-        TextButton(
-            onPressed: () {
-              cancelAllNotifications();
-            },
-            child: Text("Cancel All"))
-      ],
-    );
-  }
-
-  //Creating Notification with specific
-  //channel ID, notification title, notification content, notification trigger time
-  Future<void> createNotification(
-      String channelID, String title, String content, DateTime dateTime) async {
-    notificationsPlugin.zonedSchedule(
-        0,
-        title,
-        content,
-        tz.TZDateTime.from(dateTime, tz.local),
-        NotificationDetails(
-          android: AndroidNotificationDetails(
-              channelID, 'channel name', 'channel description'),
-        ),
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
-        androidAllowWhileIdle: true);
-  }
-
-  //Cancel all Notification
-  Future<void> cancelAllNotifications() async {
-    await notificationsPlugin.cancelAll();
+        providers: [
+          ChangeNotifierProvider(create: (_) => NotificationService())
+        ]);
   }
 }
