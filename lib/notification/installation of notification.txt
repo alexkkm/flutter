@@ -4,4 +4,3 @@ flutter pub add timezone
 Android\app\src\profile\AndroidManifest.xml:
 <uses-permission android:name="android.permission.VIBRATE" />
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
