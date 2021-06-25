@@ -9,6 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //initialize the Notification Service and TimeZone Plugin
   @override
   void initState() {
     Provider.of<NotificationService>(context, listen: false).initialize();
