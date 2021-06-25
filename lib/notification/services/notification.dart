@@ -42,6 +42,7 @@ class NotificationService extends ChangeNotifier {
   //notification ID, notification title, notification content, notification trigger time
   Future<void> createNotification(
       int id, String title, String content, DateTime dateTime) async {
+    // ignore: deprecated_member_use
     await _flutterLocalNotificationsPlugin.schedule(
         id,
         title,
