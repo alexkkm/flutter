@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:app_launcher/app_launcher.dart';
 
 void main() {
