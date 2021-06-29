@@ -1,0 +1,7 @@
+path for app icon:
+Android:    android/app/src/main/res/mipmap
+IOS:    IOS/Runner/Assets.xcassets/AppIcon.appiconset
+Web:    web/icons
+
+place need to change after renaming new icon:
+android\app\src\main\AndroidManifest.xml:   line 12     android:icon="@mipmap/ic_launcher" change ic_launcher into new name
