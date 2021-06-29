@@ -1,0 +1,11 @@
+Whatsapp	com.whatsapp
+Facebook	com.facebook.katana
+Instagram	com.instagram.android
+Youtube		com.google.android.youtube
+
+Github		com.github.android
+Gitlab		com.gitlab.terrakok.gitfox
+
+Google		com.google.android.googlequicksearchbox
+Chrome		com.chrome.dev
+Firefox		org.mozilla.firefox

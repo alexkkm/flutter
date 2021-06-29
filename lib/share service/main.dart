@@ -10,20 +10,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter',
-      home: MyHomePage(title: 'Shared Text'),
+      home: SaveByExtension(title: 'Shared Text'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class SaveByExtension extends StatefulWidget {
+  SaveByExtension({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _SaveByExtensionState createState() => _SaveByExtensionState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SaveByExtensionState extends State<SaveByExtension> {
   String _sharedText = "";
 
   @override
