@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
 void main() {
-  runApp(DemoApp());
+  runApp(SimpleApp());
 }
 
-class DemoApp extends StatefulWidget {
+class SimpleApp extends StatefulWidget {
   @override
-  DemoAppState createState() => DemoAppState();
+  SimpleAppState createState() => SimpleAppState();
 }
 
-class DemoAppState extends State<DemoApp> {
+class SimpleAppState extends State<SimpleApp> {
   String text = '';
   List<String> imagePaths = [];
 

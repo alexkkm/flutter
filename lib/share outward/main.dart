@@ -4,15 +4,15 @@ import 'package:share/share.dart';
 import 'image_previews.dart';
 
 void main() {
-  runApp(DemoApp());
+  runApp(MyApp());
 }
 
-class DemoApp extends StatefulWidget {
+class MyApp extends StatefulWidget {
   @override
-  DemoAppState createState() => DemoAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class DemoAppState extends State<DemoApp> {
+class MyAppState extends State<MyApp> {
   String text = '';
   String subject = '';
   List<String> imagePaths = [];
