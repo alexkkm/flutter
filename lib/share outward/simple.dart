@@ -12,7 +12,6 @@ class SimpleApp extends StatefulWidget {
 
 class SimpleAppState extends State<SimpleApp> {
   String text = '';
-  List<String> imagePaths = [];
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +42,8 @@ class SimpleAppState extends State<SimpleApp> {
                     builder: (BuildContext context) {
                       return ElevatedButton(
                         child: const Text('Share'),
-                        onPressed: text.isEmpty && imagePaths.isEmpty
-                            ? null
-                            : () => _onShare(context),
+                        onPressed:
+                            text.isEmpty ? null : () => _onShare(context),
                       );
                     },
                   ),
