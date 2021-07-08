@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
 void main() {
-  runApp(SimpleApp());
+  runApp(SimpleShareOutward());
 }
 
-class SimpleApp extends StatefulWidget {
+class SimpleShareOutward extends StatefulWidget {
   @override
-  SimpleAppState createState() => SimpleAppState();
+  SimpleShareOutwardState createState() => SimpleShareOutwardState();
 }
 
-class SimpleAppState extends State<SimpleApp> {
+class SimpleShareOutwardState extends State<SimpleShareOutward> {
   String text = '';
 
   @override

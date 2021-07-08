@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/notification/services/notification.dart';
+import 'package:flutter_learning/local_notification/services/notification.dart';
 import 'package:provider/provider.dart';
 import 'package:timezone/data/latest.dart' as tz; //for tz.initializeTimeZones()
 

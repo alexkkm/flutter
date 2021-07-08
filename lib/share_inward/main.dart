@@ -50,7 +50,6 @@ class _SaveByExtensionState extends State<SaveByExtension> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("App built");
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
