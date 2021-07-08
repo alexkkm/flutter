@@ -5,9 +5,9 @@ import 'package:flutter_learning/share_outward/simple.dart';
 import 'package:flutter_learning/local_notification/main.dart';
 import 'package:flutter_learning/share_inward/main.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MainApp());
 
-class MyApp extends StatelessWidget {
+class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
