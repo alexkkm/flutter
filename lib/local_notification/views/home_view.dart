@@ -19,30 +19,36 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-            child: Center(
-                child: Consumer<NotificationService>(
-      builder: (context, model, _) =>
-          Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        ElevatedButton(
-            onPressed: () => model.createNotification(
-                1,
-                "3 seconds title",
-                "3 second content",
-                DateTime.now().add(const Duration(seconds: 3))),
-            child: Text('3 sec Notification')),
-        ElevatedButton(
-            onPressed: () => model.createNotification(
-                2,
-                "6 seconds title",
-                "6 second content",
-                DateTime.now().add(const Duration(seconds: 6))),
-            child: Text('6 sec Notification')),
-        ElevatedButton(
-            onPressed: () => model.cancelAllNotification(),
-            child: Text('Cancel Notification')),
-      ]),
-    ))));
+    return MaterialApp(
+        title: "Flutter",
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text("Local Notification"),
+            ),
+            body: Container(
+                child: Center(
+                    child: Consumer<NotificationService>(
+              builder: (context, model, _) => Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                        onPressed: () => model.createNotification(
+                            1,
+                            "3 seconds title",
+                            "3 second content",
+                            DateTime.now().add(const Duration(seconds: 3))),
+                        child: Text('3 sec Notification')),
+                    ElevatedButton(
+                        onPressed: () => model.createNotification(
+                            2,
+                            "6 seconds title",
+                            "6 second content",
+                            DateTime.now().add(const Duration(seconds: 6))),
+                        child: Text('6 sec Notification')),
+                    ElevatedButton(
+                        onPressed: () => model.cancelAllNotification(),
+                        child: Text('Cancel Notification')),
+                  ]),
+            )))));
   }
 }
