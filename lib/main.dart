@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
+//Template of ElevatedButton for switching pages
 ElevatedButton switchPageButton(
     BuildContext context, String buttonText, Widget page) {
   return ElevatedButton(
