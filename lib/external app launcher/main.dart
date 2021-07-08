@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:app_launcher/app_launcher.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ExternalAppLauncher());
 }
 
-class MyApp extends StatelessWidget {
+class ExternalAppLauncher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

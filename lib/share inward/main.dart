@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ShareInward());
 }
 
-class MyApp extends StatelessWidget {
+class ShareInward extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

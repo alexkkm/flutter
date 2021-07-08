@@ -4,10 +4,10 @@ import 'views/home_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Notification());
 }
 
-class MyApp extends StatelessWidget {
+class Notification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(

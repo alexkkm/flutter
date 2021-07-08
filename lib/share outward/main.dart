@@ -4,15 +4,15 @@ import 'package:share_plus/share_plus.dart';
 import 'image_previews.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ShareOutward());
 }
 
-class MyApp extends StatefulWidget {
+class ShareOutward extends StatefulWidget {
   @override
-  MyAppState createState() => MyAppState();
+  ShareOutwardState createState() => ShareOutwardState();
 }
 
-class MyAppState extends State<MyApp> {
+class ShareOutwardState extends State<ShareOutward> {
   String text = '';
   String subject = '';
   List<String> imagePaths = [];
