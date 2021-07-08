@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           switchPage(context, "Tutorial Documents", TutorialDocument()),
-          switchPage(context, "external app launcher", ExternalAppLauncher()),
+          switchPage(context, "External app launcher", ExternalAppLauncher()),
           switchPage(context, "Local Notification", LocalNotification()),
           switchPage(context, "Share Inward", ShareInward()),
           switchPage(context, "Share Outward", SimpleShareOutward()),
