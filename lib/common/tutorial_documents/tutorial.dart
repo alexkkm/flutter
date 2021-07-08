@@ -5,7 +5,7 @@ class TutorialDocument extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(""),
+        title: Text("Tutorial Document"),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
