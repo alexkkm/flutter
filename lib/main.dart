@@ -27,18 +27,19 @@ class HomePage extends StatelessWidget {
     return Center(
       child: Column(
         children: <Widget>[
-          switchPage(context, "Tutorial Documents", TutorialDocument()),
-          switchPage(context, "External app launcher", ExternalAppLauncher()),
-          switchPage(context, "Local Notification", LocalNotification()),
-          switchPage(context, "Share Inward", ShareInward()),
-          switchPage(context, "Share Outward", SimpleShareOutward()),
+          switchPageButton(context, "Tutorial Documents", TutorialDocument()),
+          switchPageButton(
+              context, "External app launcher", ExternalAppLauncher()),
+          switchPageButton(context, "Local Notification", LocalNotification()),
+          switchPageButton(context, "Share Inward", ShareInward()),
+          switchPageButton(context, "Share Outward", SimpleShareOutward()),
         ],
       ),
     );
   }
 }
 
-ElevatedButton switchPage(
+ElevatedButton switchPageButton(
     BuildContext context, String buttonText, Widget page) {
   return ElevatedButton(
     child: Text(buttonText),
