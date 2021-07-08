@@ -2,15 +2,21 @@
 
 A personal Flutter App for saving the progress and flutter learning process.
 
-## Functions:
+### Functions:
 
-- [Tutorial Documents](#TutorialDocuments)
-- [External App Launcher](#ExternalAppLauncher)
-- [Local Notification](#LocalNotification)
-- [Share Inward](#ShareInward)
-- [Share Outward](#ShareOutward)
+1. [Tutorial Documents](#TutorialDocuments)
+2. [External App Launcher](#ExternalAppLauncher)
+3. [Local Notification](#LocalNotification)
+4. [Share Inward](#ShareInward)
+5. [Share Outward](#ShareOutward)
 
 ### Tutorial Documents
+
+Providing tutorials for following operations:  
+
++ Renaming the project and the mobile app
++ Changing mobile app icon  
+
 
 ### External App Launcher
 
