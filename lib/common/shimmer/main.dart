@@ -9,7 +9,7 @@ class ShimmerPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Shimmer',
+      title: 'Flutter',
       routes: <String, WidgetBuilder>{
         'loading': (_) => LoadingListPage(),
       },
