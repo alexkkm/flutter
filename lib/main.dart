@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
@@ -33,6 +34,7 @@ class HomePage extends StatelessWidget {
           switchPageButton(context, "Local Notification", LocalNotification()),
           switchPageButton(context, "Share Inward", ShareInward()),
           switchPageButton(context, "Share Outward", SimpleShareOutward()),
+          switchPageButton(context, "Shimmer", ShimmerPlugin()),
         ],
       ),
     );

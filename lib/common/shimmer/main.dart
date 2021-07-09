@@ -51,8 +51,6 @@ class LoadingListPage extends StatefulWidget {
 }
 
 class _LoadingListPageState extends State<LoadingListPage> {
-  bool _enabled = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,11 +89,9 @@ class _LoadingListPageState extends State<LoadingListPage> {
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: TextButton(
                   onPressed: () {
-                    setState(() {
-                      _enabled = !_enabled;
-                    });
+                    Navigator.pop(context);
                   },
-                  child: Text("A")),
+                  child: Text("Back to Shimmer")),
             )
           ],
         ),
