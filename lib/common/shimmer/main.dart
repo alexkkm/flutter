@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/common/shimmer/color.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:flutter_learning/common/shimmer/shimmerBox.dart';
+import 'package:flutter_learning/common/shimmer/decoration.dart';
 
 void main() => runApp(ShimmerPlugin());
 
@@ -64,27 +64,22 @@ class _LoadingListPageState extends State<LoadingListPage> {
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             Expanded(
-                child: Shimmer.fromColors(
-                    baseColor: Color(0xfff7f7fb),
-                    direction: ShimmerDirection.ltr,
-                    highlightColor: CustomizedColors.background1,
-                    child: Center(
-                        child:
-                            // Change widget below shown when the event list is not ready
-                            ListView(
-                      padding: const EdgeInsets.only(top: 20, bottom: 20),
-                      children: <Widget>[
-                        // Rectangle 4
-                        normalBox(),
-                        normalBox(),
-                        normalBox(),
-                        normalBox()
-                      ],
-                    )
-
-                        // Change widget above shown when the event list is not ready
-
-                        ))),
+              child: Shimmer.fromColors(
+                baseColor: Color(0xfff7f7fb),
+                direction: ShimmerDirection.ltr,
+                highlightColor: CustomizedColors.background1,
+                child: Center(
+                  child: ListView(
+                    padding: const EdgeInsets.only(top: 20, bottom: 20),
+                    children: <Widget>[
+                      //The below 2 boxes are the same
+                      shimmerBox(),
+                      rectangleBox(),
+                    ],
+                  ),
+                ),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: TextButton(
