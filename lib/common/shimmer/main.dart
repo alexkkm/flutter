@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/common/shimmer/theme.dart';
+import 'package:flutter_learning/common/shimmer/color.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:flutter_learning/common/shimmer/shimmerBox.dart';
 
