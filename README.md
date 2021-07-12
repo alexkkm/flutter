@@ -68,7 +68,11 @@ and replace with:
 #org.gradle.jvmargs=-Xmx1536M
 org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11
 ```
-
+6. Add the following into <code>android/app/src/main/AndroidManifest.xml</code>,before the <code>Application tag</code>
+```
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="30" />
+```
 
 
 ### Functions:
