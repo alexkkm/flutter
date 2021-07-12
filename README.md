@@ -2,7 +2,7 @@
 
 A personal Flutter App for saving the progress and flutter learning process.
 
-### ! ! ! Issues on running release mode ! ! !   
+### Settings for running release mode:
 1. run the following code in terminal:
 ```temrinal
 keytool -genkey -v -keystore D:\Users\user\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
