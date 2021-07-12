@@ -7,6 +7,9 @@ A personal Flutter App for saving the progress and flutter learning process.
 ```temrinal
 keytool -genkey -v -keystore D:\Users\user\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
+```
+[NOTES: D:\Users\user\upload-keystore.jks should be changed according to your computer user name]
+```
 and set the password as <code>testing</code>, type <code>y</code> when asking [<code>No</code>]  
 2. create a file called <code>key.property</code>, and add the followings code into it:
 ```
