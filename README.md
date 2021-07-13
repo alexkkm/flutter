@@ -7,10 +7,9 @@ A personal Flutter App for saving the progress and flutter learning process.
 ```temrinal
 keytool -genkey -v -keystore D:\Users\user\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
-```
-[NOTES: D:\Users\user\upload-keystore.jks should be changed according to your computer user name]
-```
+NOTE: <code>D:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
 and set the password as <code>testing</code>, type <code>y</code> when asking [<code>No</code>]  
+
 2. create a file called <code>key.property</code>, and add the followings code into it:
 ```
 storePassword=testing
@@ -18,6 +17,8 @@ keyPassword=testing
 keyAlias=upload
 storeFile=D:/Users/user/upload-keystore.jks
 ```
+NOTE: <code>D:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
+
 3. add the following code into <code>android/app/build.gradle</code>:
 ```
 def keystoreProperties = new Properties()
@@ -26,7 +27,7 @@ def keystoreProperties = new Properties()
        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
    }
 ```
-add the following code in the same file's lintOptions field 
+add the following code in the same file's Android field  
 ```
 lintOptions{
     disable 'InvalidPackage'
@@ -34,7 +35,7 @@ lintOptions{
     abortOnError false
 }
 ```
-replace the code:
+replace the code:  
 ```
 buildTypes {
        release {
@@ -42,7 +43,7 @@ buildTypes {
        }
    }
 ```
-into
+into  
 ```
 signingConfigs {
        release {
@@ -58,22 +59,23 @@ signingConfigs {
        }
    }
 ```
-4. download the jdk 11.0.1 and install it in <code>D:\Program Files\Java\jdk-11.0.11</code>
-5. find the following comment in android/gradle.properties:
-```
-org.gradle.jvmargs=-Xmx1536M
-```
-and replace with:
-```
-#org.gradle.jvmargs=-Xmx1536M
-org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11
-```
-6. Add the following into <code>android/app/src/main/AndroidManifest.xml</code>,before the <code>Application tag</code>
+4. Add the following into <code>android/app/src/main/AndroidManifest.xml</code>,before the <code>Application tag</code>  
 ```
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="30" />
 ```
-
+5. download the jdk 11.0.1 and install it in <code>D:\Program Files\Java\jdk-11.0.11</code>  
+6. find the following comment in android/gradle.properties:  
+```
+org.gradle.jvmargs=-Xmx1536M
+```
+and replace with:  
+```
+#org.gradle.jvmargs=-Xmx1536M
+org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11
+```
+NOTE: In gradle.properties:<code>org.gradle.java.home</code> path should be change according to the path you install jdk 11.0.11 in last steps  
+NOTE: gradle.properties should not be add into gitignore, all other files generate above can be gitignore, and generate when need to build release apk
 
 ### Functions:
 
