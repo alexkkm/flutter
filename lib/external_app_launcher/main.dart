@@ -9,6 +9,7 @@ class ExternalAppLauncher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Flutter",
       home: Scaffold(
         appBar: AppBar(
           title: const Text('External App Launcher'),

@@ -50,25 +50,27 @@ class _SaveByExtensionState extends State<SaveByExtension> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'The shared text that you received is:',
+    return MaterialApp(
+        title: "Flutter",
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text(widget.title),
+          ),
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'The shared text that you received is:',
+                ),
+                Text(
+                  _sharedText,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
             ),
-            Text(
-              _sharedText,
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 }
 

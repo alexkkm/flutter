@@ -12,7 +12,7 @@ class LocalNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
         child: MaterialApp(
-          theme: ThemeData(fontFamily: 'Monteserat'),
+          title: "Flutter",
           home: HomePage(),
           debugShowCheckedModeBanner: false,
         ),
