@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:localstorage/localstorage.dart';
 
 void main() {
-  runApp(new LocalStoragePlugin());
+  runApp(new ToDoListPlugin());
 }
 
-class LocalStoragePlugin extends StatelessWidget {
+class ToDoListPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -26,24 +26,24 @@ class HomePage extends StatefulWidget {
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-class Word {
-  String wordContent;
+class TodoItem {
+  String title;
+  bool done;
 
-  Word({
-    required this.wordContent,
-  });
+  TodoItem({required this.title, required this.done});
 
   toJSONEncodable() {
-    Map<String, dynamic> wordMap = new Map();
+    Map<String, dynamic> todoItemMap = new Map();
 
-    wordMap['wordContent'] = wordContent;
+    todoItemMap['title'] = title;
+    todoItemMap['done'] = done;
 
-    return wordMap;
+    return todoItemMap;
   }
 }
 
-class Dictionary {
-  List<Word> items = [];
+class TodoList {
+  List<TodoItem> items = [];
 
   toJSONEncodable() {
     return items.map((item) {
@@ -53,28 +53,35 @@ class Dictionary {
 }
 
 class _MyHomePageState extends State<HomePage> {
-  final Dictionary list = new Dictionary();
-  final LocalStorage storage = new LocalStorage('local_storage_name');
+  final TodoList list = new TodoList();
+  final LocalStorage storage = new LocalStorage('todo_app');
   bool initialized = false;
   TextEditingController controller = new TextEditingController();
 
-  _addItem(String wordContent) {
+  _toggleItem(TodoItem item) {
     setState(() {
-      final item = new Word(wordContent: wordContent);
+      item.done = !item.done;
+      _saveToStorage();
+    });
+  }
+
+  _addItem(String title) {
+    setState(() {
+      final item = new TodoItem(title: title, done: false);
       list.items.add(item);
       _saveToStorage();
     });
   }
 
   _saveToStorage() {
-    storage.setItem('key_in_storage', list.toJSONEncodable());
+    storage.setItem('todos', list.toJSONEncodable());
   }
 
   _clearStorage() async {
     await storage.clear();
 
     setState(() {
-      list.items = storage.getItem('key_in_storage') ?? [];
+      list.items = storage.getItem('todos') ?? [];
     });
   }
 
@@ -97,13 +104,14 @@ class _MyHomePageState extends State<HomePage> {
               }
 
               if (!initialized) {
-                var items = storage.getItem('key_in_storage');
+                var items = storage.getItem('todos');
 
                 if (items != null) {
-                  list.items = List<Word>.from(
+                  list.items = List<TodoItem>.from(
                     (items as List).map(
-                      (item) => Word(
-                        wordContent: item['wordContent'],
+                      (item) => TodoItem(
+                        title: item['title'],
+                        done: item['done'],
                       ),
                     ),
                   );
@@ -113,7 +121,14 @@ class _MyHomePageState extends State<HomePage> {
               }
 
               List<Widget> widgets = list.items.map((item) {
-                return Text(item.wordContent);
+                return CheckboxListTile(
+                  value: item.done,
+                  title: Text(item.title),
+                  selected: item.done,
+                  onChanged: (_) {
+                    _toggleItem(item);
+                  },
+                );
               }).toList();
 
               return Column(
@@ -129,7 +144,7 @@ class _MyHomePageState extends State<HomePage> {
                     title: TextField(
                       controller: controller,
                       decoration: InputDecoration(
-                        labelText: 'Word to Save:',
+                        labelText: 'What to do?',
                       ),
                       onEditingComplete: _save,
                     ),

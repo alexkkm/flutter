@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
-import 'package:flutter_learning/local_storage/main.dart';
+import 'package:flutter_learning/todo_list_plugin/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
 import 'package:flutter_learning/local_notification/main.dart';
 import 'package:flutter_learning/share_inward/main.dart';
+import 'local_storage/main.dart';
 
 void main() => runApp(MainApp());
 
@@ -37,7 +38,8 @@ class HomePage extends StatelessWidget {
           switchPageButton(context, "Share Inward", ShareInward()),
           switchPageButton(context, "Share Outward", SimpleShareOutward()),
           switchPageButton(context, "Shimmer", ShimmerPlugin()),
-          switchPageButton(context, "Local Storage", LocalStoragePlugin())
+          switchPageButton(context, "Local Storage", LocalStoragePlugin()),
+          switchPageButton(context, "ToDo List Plugin", ToDoListPlugin()),
         ],
       ),
     );
