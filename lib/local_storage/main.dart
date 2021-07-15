@@ -6,6 +6,36 @@ void main() {
   runApp(new LocalStoragePlugin());
 }
 
+//Define the Word Class: A sigle Word only contains a String as content,
+//and Word Class is JSONEncodable to be stored
+class Word {
+  String wordContent;
+
+  Word({
+    required this.wordContent,
+  });
+
+  toJSONEncodable() {
+    Map<String, dynamic> wordMap = new Map();
+
+    wordMap['wordContent'] = wordContent;
+
+    return wordMap;
+  }
+}
+
+//Define the Dictionary Class: Dictionary contains a wordlist as its content,
+//and Dictionary is also toJSONEncodeable to be store
+class Dictionary {
+  List<Word> wordlist = [];
+
+  toJSONEncodable() {
+    return wordlist.map((item) {
+      return item.toJSONEncodable();
+    }).toList();
+  }
+}
+
 class LocalStoragePlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,55 +56,39 @@ class HomePage extends StatefulWidget {
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-class Word {
-  String wordContent;
-
-  Word({
-    required this.wordContent,
-  });
-
-  toJSONEncodable() {
-    Map<String, dynamic> wordMap = new Map();
-
-    wordMap['wordContent'] = wordContent;
-
-    return wordMap;
-  }
-}
-
-class Dictionary {
-  List<Word> items = [];
-
-  toJSONEncodable() {
-    return items.map((item) {
-      return item.toJSONEncodable();
-    }).toList();
-  }
-}
-
 class _MyHomePageState extends State<HomePage> {
-  final Dictionary list = new Dictionary();
+  final Dictionary dict = new Dictionary();
   final LocalStorage storage = new LocalStorage('local_storage_name');
   bool initialized = false;
   TextEditingController controller = new TextEditingController();
 
+  //Define the functions for performing local storage
+
+  //Save the Dictionary to the local storage
+  _saveToStorage() {
+    storage.setItem('key_in_storage', dict.toJSONEncodable());
+  }
+
+  //Add the Word into the Dictionary, and save the Dictionary to local storage
   _addItem(String wordContent) {
     setState(() {
       final item = new Word(wordContent: wordContent);
-      list.items.add(item);
+      dict.wordlist.add(item);
       _saveToStorage();
     });
   }
 
-  _saveToStorage() {
-    storage.setItem('key_in_storage', list.toJSONEncodable());
+  //Save Function of save button
+  void _save() {
+    _addItem(controller.value.text);
+    controller.clear();
   }
 
+  //Clear all local storage data
   _clearStorage() async {
     await storage.clear();
-
     setState(() {
-      list.items = storage.getItem('key_in_storage') ?? [];
+      dict.wordlist = storage.getItem('key_in_storage') ?? [];
     });
   }
 
@@ -97,11 +111,11 @@ class _MyHomePageState extends State<HomePage> {
               }
 
               if (!initialized) {
-                var items = storage.getItem('key_in_storage');
+                var wordlist = storage.getItem('key_in_storage');
 
-                if (items != null) {
-                  list.items = List<Word>.from(
-                    (items as List).map(
+                if (wordlist != null) {
+                  dict.wordlist = List<Word>.from(
+                    (wordlist as List).map(
                       (item) => Word(
                         wordContent: item['wordContent'],
                       ),
@@ -112,7 +126,7 @@ class _MyHomePageState extends State<HomePage> {
                 initialized = true;
               }
 
-              List<Widget> widgets = list.items.map((item) {
+              List<Widget> widgets = dict.wordlist.map((item) {
                 return Text(item.wordContent);
               }).toList();
 
@@ -154,10 +168,5 @@ class _MyHomePageState extends State<HomePage> {
             },
           )),
     );
-  }
-
-  void _save() {
-    _addItem(controller.value.text);
-    controller.clear();
   }
 }
