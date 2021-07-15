@@ -89,7 +89,7 @@ class _MyHomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Local Storage'),
+        title: new Text('ToDo List'),
       ),
       body: Container(
           padding: EdgeInsets.all(10.0),
