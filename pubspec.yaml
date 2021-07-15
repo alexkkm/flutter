@@ -49,16 +49,17 @@ dependencies:
   # Shimmer
   shimmer: ^2.0.0
 
-  #local sorage
+  # local sorage
   localstorage: ^4.0.0+1
 
-  #common
+  # common
   floating_search_bar: ^0.3.0
   material_floating_search_bar: ^0.3.4
   provider: ^5.0.0
   fluttertoast: ^8.0.7
 
-  #new
+  # new
+
   
 dev_dependencies:
   flutter_test:
