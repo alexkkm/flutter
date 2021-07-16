@@ -33,11 +33,20 @@ class _AuthAppState extends State<AuthApp> {
         body: Center(
           child: Column(
             children: [
-              TextField(controller: emailController),
-              TextField(controller: passwordController),
+              //TextField for inputting email address
+              TextField(
+                  decoration: InputDecoration(hintText: "Email"),
+                  controller: emailController),
+              //TextField for inputting password
+              TextField(
+                  decoration: InputDecoration(hintText: "Password"),
+                  //Blur the inputing password
+                  obscureText: true,
+                  controller: passwordController),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+                  //Button for Signning Up
                   ElevatedButton(
                       child: Text('Sign Up'),
                       onPressed: () async {
@@ -48,6 +57,7 @@ class _AuthAppState extends State<AuthApp> {
                         );
                         setState(() {});
                       }),
+                  //Button for Signning In
                   ElevatedButton(
                       child: Text('Sign In'),
                       onPressed: () async {
@@ -57,6 +67,7 @@ class _AuthAppState extends State<AuthApp> {
                         );
                         setState(() {});
                       }),
+                  //Button for Signning In
                   ElevatedButton(
                       child: Text('Log Out'),
                       onPressed: () async {
