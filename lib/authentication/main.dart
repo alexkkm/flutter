@@ -41,8 +41,7 @@ class _AuthenticationPluginState extends State<AuthenticationPlugin> {
               //TextField for inputting password
               TextField(
                   decoration: InputDecoration(hintText: "Password"),
-                  //Blur the inputing password
-                  obscureText: true,
+                  obscureText: true, //Blur the inputing password
                   controller: passwordController),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
