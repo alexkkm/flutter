@@ -3,9 +3,9 @@
 A personal Flutter App for saving the progress and flutter learning process.
 
 ---
-1. [Essential Setting after clonning the repo into your own device](#essential-setting-after-clonning-the-repo-into-your-own-device-:)
-2. [Settings for running release mode](#settings-for-running-release-mode-:)
-3. [Functions](#functions:)
+1. [Essential Setting after clonning the repo into your own device](#essential-setting-after-clonning-the-repo-into-your-own-device)
+2. [Settings for running release mode](#settings-for-running-release-mode)
+3. [Functions](#functions)
 4. [Tutorial Documents](#tutorial-documents)
 5. [External App Launcher](#external-app-launcher)
 6. [Local Notification](#local-notification)
