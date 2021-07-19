@@ -2,6 +2,24 @@
 
 A personal Flutter App for saving the progress and flutter learning process.
 
+---
+1. [Essential Setting after clonning the repo into your own device](#essential-setting-after-clonning-the-repo-into-your-own-device-:)
+2. [Settings for running release mode](#settings-for-running-release-mode-:)
+3. [Functions](#functions:)
+4. [Tutorial Documents](#tutorial-documents)
+5. [External App Launcher](#external-app-launcher)
+6. [Local Notification](#local-notification)
+7. [Share Inward](#share-inward)
+8. [Share Outward](#share-outward)
+9. [Local Storage](#local-storage)
+10. [To Do List](#to-do-list)
+---
+### Essential Setting after clonning the repo into your own device:
+1. Open the file at the location: android/gradle.properties
+2. In the line: <code> org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11 </code>, change the <code> D:\\Program Files\\Java\\jdk-11.0.11 </code> into the location of your own Java Jdk  
+(Note that the version of Java jdk should lower then 12)
+---
+
 ### Settings for running release mode:
 1. run the following code in terminal:
 ```temrinal
@@ -77,6 +95,7 @@ org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11
 NOTE: In gradle.properties:<code>org.gradle.java.home</code> path should be change according to the path you install jdk 11.0.11 in last steps  
 NOTE: gradle.properties should not be add into gitignore, all other files generate above can be gitignore, and generate when need to build release apk
 
+---
 ### Functions:
 
 1. [Tutorial Documents](#TutorialDocuments)
@@ -85,10 +104,10 @@ NOTE: gradle.properties should not be add into gitignore, all other files genera
 4. [Share Inward](#ShareInward)
 5. [Share Outward](#ShareOutward)
 
+---
 ### Tutorial Documents
 
 Providing tutorials for following operations:  
-
 + Renaming the project and the mobile app
 + Changing mobile app icon  
 
@@ -103,5 +122,5 @@ Providing tutorials for following operations:
 
 ### Local Storage
 
-### ToDo List
+### To Do List
 
