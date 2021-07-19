@@ -58,7 +58,7 @@ class ShareOutwardState extends State<ShareOutward> {
                     title: Text("Add image"),
                     onTap: () async {
                       final imagePicker = ImagePicker();
-                      final pickedFile = await imagePicker.getImage(
+                      final pickedFile = await imagePicker.pickImage(
                         source: ImageSource.gallery,
                       );
                       if (pickedFile != null) {
