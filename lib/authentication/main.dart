@@ -44,6 +44,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
       appBar: AppBar(title: Text('Authentication Page')),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             //TextField for inputting email address
             TextField(
@@ -115,6 +117,8 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: Text('HomePage')),
       body: Center(
           child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text("Logged In Sucessfully!"),
           ElevatedButton(
