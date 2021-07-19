@@ -55,12 +55,16 @@ dependencies:
   # Firebase
   firebase_core: ^1.4.0
   firebase_auth: ^3.0.0
+
+  # Google Sign In
+  google_sign_in: ^5.0.4
   
   # common
   floating_search_bar: ^0.3.0
   material_floating_search_bar: ^0.3.4
   provider: ^5.0.0
   fluttertoast: ^8.0.7
+  
   
 
 
