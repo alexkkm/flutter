@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
@@ -40,6 +41,10 @@ class HomePage extends StatelessWidget {
           switchPageButton(context, "Shimmer", ShimmerPlugin()),
           switchPageButton(context, "Local Storage", LocalStoragePlugin()),
           switchPageButton(context, "ToDo List Plugin", ToDoListPlugin()),
+          ElevatedButton(
+              child: Text("Authentication"),
+              onPressed: () =>
+                  AuthenticationPlugin()) //Dont Abstract this Button,
         ],
       ),
     );
@@ -56,4 +61,9 @@ ElevatedButton switchPageButton(
       Navigator.push(context, MaterialPageRoute(builder: (context) => page));
     },
   );
+}
+
+ElevatedButton buildAppButton() {
+  return ElevatedButton(
+      child: Text("Authentication"), onPressed: () => AuthenticationPlugin());
 }
