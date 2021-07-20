@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/Google/main.dart';
 import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
@@ -44,7 +45,10 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
               child: Text("Authentication"),
               onPressed: () =>
-                  AuthenticationPlugin()) //Dont Abstract this Button,
+                  AuthenticationPlugin()), //Dont Abstract this Button
+          ElevatedButton(
+              child: Text("Google Sign In Plugin"),
+              onPressed: () => GoolgeSignInPlugin())
         ],
       ),
     );
