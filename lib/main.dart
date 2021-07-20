@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/Google/main.dart';
+import 'package:flutter_learning/google_signin/main.dart';
 import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                   AuthenticationPlugin()), //Dont Abstract this Button
           ElevatedButton(
               child: Text("Google Sign In Plugin"),
-              onPressed: () => GoolgeSignInPlugin())
+              onPressed: () => GoogleSigninPlugin())
         ],
       ),
     );
@@ -65,9 +65,4 @@ ElevatedButton switchPageButton(
       Navigator.push(context, MaterialPageRoute(builder: (context) => page));
     },
   );
-}
-
-ElevatedButton buildAppButton() {
-  return ElevatedButton(
-      child: Text("Authentication"), onPressed: () => AuthenticationPlugin());
 }

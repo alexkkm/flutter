@@ -5,10 +5,10 @@ import 'package:flutter_learning/authentication/service.dart';
 import 'package:flutter_learning/main.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-void main() => GoolgeSignInPlugin();
+void main() => GoogleSigninPlugin();
 
 // ignore: non_constant_identifier_names
-void GoolgeSignInPlugin() async {
+void GoogleSigninPlugin() async {
   //initialize the Firebase Setting
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -22,21 +22,21 @@ void GoolgeSignInPlugin() async {
         stream: AuthenticationService.instance.authStateChange(),
         builder: (_, snapshot) {
           final isSignedIn = snapshot.data != null;
-          return isSignedIn ? HomePage() : GoogleSignInPage();
+          return isSignedIn ? HomePage() : GoogleSigninPage();
         },
       ),
     ),
   );
 }
 
-class GoogleSignInPage extends StatefulWidget {
-  const GoogleSignInPage({Key? key}) : super(key: key);
+class GoogleSigninPage extends StatefulWidget {
+  const GoogleSigninPage({Key? key}) : super(key: key);
 
   @override
-  _GoogleSignInPageState createState() => _GoogleSignInPageState();
+  _GoogleSigninPageState createState() => _GoogleSigninPageState();
 }
 
-class _GoogleSignInPageState extends State<GoogleSignInPage> {
+class _GoogleSigninPageState extends State<GoogleSigninPage> {
   bool isSigningIn = false;
   final googleSignIn = GoogleSignIn();
 

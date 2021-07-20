@@ -14,7 +14,7 @@ A personal Flutter App for saving the progress and flutter learning process.
 9. [Local Storage](#local-storage)
 10. [To Do List](#to-do-list)
 11. [Authentication](#authentication)
-12. [Google Sign In](#google-sign-in)
+12. [Google Signin](#google-sign-in)
 ---
 ### Essential Setting after clonning the repo into your own device:
 1. Open the file at the location: android/gradle.properties
