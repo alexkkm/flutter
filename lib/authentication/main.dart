@@ -75,6 +75,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         debugPrint("Sign up failed");
                       }
                     }),
+
                 //Button for Signning In
                 ElevatedButton(
                   child: Text('Sign In'),
@@ -90,18 +91,11 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     }
                   },
                 ),
-                //Button for signning out
+
+                //Button for moving back to Home Page
                 ElevatedButton(
-                  child: Text("Sign Out"),
-                  onPressed: () async {
-                    try {
-                      await AuthenticationService.instance.signOut();
-                      setState(() {});
-                    } catch (e) {
-                      debugPrint("Sign out failed");
-                    }
-                  },
-                )
+                    onPressed: () => {runApp(MainApp())},
+                    child: Text("Back to Home Page"))
               ],
             ),
           ],
@@ -121,7 +115,9 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          //Content of Home Page
           Text("Logged In Sucessfully!"),
+
           //Button for signning out
           ElevatedButton(
             onPressed: () async {
@@ -133,6 +129,8 @@ class HomePage extends StatelessWidget {
             },
             child: Text('Sign out'),
           ),
+
+          //Button for moving back to Home Page
           ElevatedButton(
               onPressed: () => {runApp(MainApp())},
               child: Text("Back to Home Page"))

@@ -79,6 +79,7 @@ class _GoogleSigninPageState extends State<GoogleSigninPage> {
                     }
                   },
                 ),
+
                 //Button for moving back to Home Page
                 ElevatedButton(
                     onPressed: () => {runApp(MainApp())},
@@ -103,6 +104,7 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          //Content of Home Page
           Text("Logged In Sucessfully!"),
 
           //Button for Signning Out
@@ -111,7 +113,7 @@ class HomePage extends StatelessWidget {
               await googleSignIn.disconnect();
               FirebaseAuth.instance.signOut();
             },
-            child: Text('Logout'),
+            child: Text('Sign out Google Account'),
           ),
 
           //Button for moving back to Home Page
