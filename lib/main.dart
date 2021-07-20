@@ -4,7 +4,7 @@ import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
-import 'package:flutter_learning/to_do_list_plugin/main.dart';
+import 'package:flutter_learning/to_do_list/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
 import 'package:flutter_learning/local_notification/main.dart';
 import 'package:flutter_learning/share_inward/main.dart';
