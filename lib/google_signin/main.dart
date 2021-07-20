@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_learning/authentication/service.dart';
 import 'package:flutter_learning/main.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 void main() => GoogleSigninPlugin();
 
@@ -49,33 +50,39 @@ class _GoogleSigninPageState extends State<GoogleSigninPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 //Button for signning in with Google account
-                TextButton(
-                  child: Text(
-                    'Sign In With Google',
-                  ),
+                SignInButton(
+                  Buttons.Google,
                   onPressed: () async {
                     //function for sign in with Google account
                     isSigningIn = true;
-                    final user = await googleSignIn.signIn();
-                    if (user == null) {
-                      isSigningIn = false;
-                      return;
-                    } else {
-                      final googleAuth = await user.authentication;
-                      final credential = GoogleAuthProvider.credential(
-                        accessToken: googleAuth.accessToken,
-                        idToken: googleAuth.idToken,
-                      );
-                      await FirebaseAuth.instance
-                          .signInWithCredential(credential);
-                      isSigningIn = false;
+                    try {
+                      final user = await googleSignIn.signIn();
+                      if (user == null) {
+                        isSigningIn = false;
+                        return;
+                      } else {
+                        final googleAuth = await user.authentication;
+                        final credential = GoogleAuthProvider.credential(
+                          accessToken: googleAuth.accessToken,
+                          idToken: googleAuth.idToken,
+                        );
+                        await FirebaseAuth.instance
+                            .signInWithCredential(credential);
+                        isSigningIn = false;
+                      }
+                    } catch (e) {
+                      debugPrint("Signin with Google failed");
                     }
                   },
                 ),
+                //Button for moving back to Home Page
+                ElevatedButton(
+                    onPressed: () => {runApp(MainApp())},
+                    child: Text("Back to Home Page"))
               ],
             ),
           ],

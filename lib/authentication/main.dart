@@ -90,18 +90,18 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     }
                   },
                 ),
-                //Button for Signning Out
+                //Button for signning out
                 ElevatedButton(
-                  child: Text('Log Out'),
+                  child: Text("Sign Out"),
                   onPressed: () async {
                     try {
-                      await FirebaseAuth.instance.signOut();
+                      await AuthenticationService.instance.signOut();
                       setState(() {});
                     } catch (e) {
-                      debugPrint("Log out failed");
+                      debugPrint("Sign out failed");
                     }
                   },
-                ),
+                )
               ],
             ),
           ],
@@ -122,8 +122,15 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text("Logged In Sucessfully!"),
+          //Button for signning out
           ElevatedButton(
-            onPressed: () => AuthenticationService.instance.signOut(),
+            onPressed: () async {
+              try {
+                await AuthenticationService.instance.signOut();
+              } catch (e) {
+                debugPrint("Sign out failed");
+              }
+            },
             child: Text('Sign out'),
           ),
           ElevatedButton(
