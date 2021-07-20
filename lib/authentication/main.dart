@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           //Content of Home Page
-          Text("Logged In Sucessfully!"),
+          Text("Sign In Sucessfully!"),
 
           //Button for signning out
           ElevatedButton(

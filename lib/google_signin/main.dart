@@ -110,8 +110,12 @@ class HomePage extends StatelessWidget {
           //Button for Signning Out
           ElevatedButton(
             onPressed: () async {
-              await googleSignIn.disconnect();
-              FirebaseAuth.instance.signOut();
+              try {
+                await googleSignIn.disconnect();
+                FirebaseAuth.instance.signOut();
+              } catch (e) {
+                debugPrint("Sign out failed");
+              }
             },
             child: Text('Sign out Google Account'),
           ),
