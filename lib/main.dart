@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
               onPressed: () =>
                   AuthenticationPlugin()), //Dont Abstract this Button
           ElevatedButton(
-              child: Text("Google Sign In Plugin"),
+              child: Text("Google Signin Plugin"),
               onPressed: () => GoogleSigninPlugin())
         ],
       ),
