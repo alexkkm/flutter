@@ -49,6 +49,9 @@ dependencies:
   # Shimmer
   shimmer: ^2.0.0
 
+  # OnBoarding
+  introduction_screen: ^2.1.0
+
   # local storage and ToDo List Plugin
   localstorage: ^4.0.0+1
 

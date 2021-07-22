@@ -5,6 +5,7 @@ import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
+import 'package:flutter_learning/introduction_page/main.dart';
 import 'package:flutter_learning/to_do_list/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
 import 'package:flutter_learning/local_notification/main.dart';
@@ -35,6 +36,9 @@ class HomePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           switchPageButton(context, "Tutorial Documents", TutorialDocument()),
+          ElevatedButton(
+              child: Text("Introduction Plgin"),
+              onPressed: () => IntroductionPlugin()),
           switchPageButton(context, "Searching", SearchingPlugin()),
           switchPageButton(context, "Shimmer", ShimmerPlugin()),
           switchPageButton(
@@ -51,7 +55,7 @@ class HomePage extends StatelessWidget {
                   AuthenticationPlugin()), //Dont Abstract this Button
           ElevatedButton(
               child: Text("Google Signin Plugin"),
-              onPressed: () => GoogleSigninPlugin())
+              onPressed: () => GoogleSigninPlugin()),
         ],
       ),
     );
