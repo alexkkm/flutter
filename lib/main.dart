@@ -9,7 +9,7 @@ import 'package:flutter_learning/to_do_list/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
 import 'package:flutter_learning/local_notification/main.dart';
 import 'package:flutter_learning/share_inward/main.dart';
-import 'local_storage/main.dart';
+import 'package:flutter_learning/local_storage/main.dart';
 
 void main() => runApp(MainApp());
 
