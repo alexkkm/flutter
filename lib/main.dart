@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/common/searching/main.dart';
 import 'package:flutter_learning/google_signin/main.dart';
 import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
@@ -34,12 +35,14 @@ class HomePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           switchPageButton(context, "Tutorial Documents", TutorialDocument()),
+          switchPageButton(context, "Searching", SearchingPlugin()),
+          switchPageButton(context, "Shimmer", ShimmerPlugin()),
           switchPageButton(
               context, "External App launcher", ExternalAppLauncher()),
           switchPageButton(context, "Local Notification", LocalNotification()),
           switchPageButton(context, "Share Inward", ShareInward()),
           switchPageButton(context, "Share Outward", SimpleShareOutward()),
-          switchPageButton(context, "Shimmer", ShimmerPlugin()),
+
           switchPageButton(context, "Local Storage", LocalStoragePlugin()),
           switchPageButton(context, "ToDo List Plugin", ToDoListPlugin()),
           ElevatedButton(
