@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/common/common.dart';
 import 'package:flutter_learning/common/introduction_plugin/main.dart';
 import 'package:flutter_learning/common/searching/main.dart';
 import 'package:flutter_learning/google_signin/main.dart';
@@ -35,12 +36,7 @@ class HomePage extends StatelessWidget {
     return Center(
       child: Column(
         children: <Widget>[
-          switchPageButton(context, "Tutorial Documents", TutorialDocument()),
-          ElevatedButton(
-              child: Text("Introduction Plgin"),
-              onPressed: () => IntroductionPlugin()),
-          switchPageButton(context, "Searching", SearchingPlugin()),
-          switchPageButton(context, "Shimmer", ShimmerPlugin()),
+          switchPageButton(context, "Common", CommonManu()),
           switchPageButton(
               context, "External App launcher", ExternalAppLauncher()),
           switchPageButton(context, "Local Notification", LocalNotification()),
