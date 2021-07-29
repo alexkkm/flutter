@@ -10,17 +10,22 @@ void main() => runApp(CommonManu());
 class CommonManu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          switchPageButton(context, "Tutorial Documents", TutorialDocument()),
-          switchPageButton(context, "Switch Page", SwitchPageTutorial()),
-          switchPageButton(context, "Shimmer", ShimmerPlugin()),
-          switchPageButton(
-              context, "Introduction Plugin", IntroductionPlugin()),
-          switchPageButton(context, "Searching", SearchingPlugin()),
-          switchPageButton(context, "Shimmer", ShimmerPlugin()),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Common"),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            switchPageButton(context, "Tutorial Documents", TutorialDocument()),
+            switchPageButton(context, "Switch Page", SwitchPageTutorial()),
+            switchPageButton(context, "Shimmer", ShimmerPlugin()),
+            switchPageButton(
+                context, "Introduction Plugin", IntroductionPlugin()),
+            switchPageButton(context, "Searching", SearchingPlugin()),
+            switchPageButton(context, "Shimmer", ShimmerPlugin()),
+          ],
+        ),
       ),
     );
   }
