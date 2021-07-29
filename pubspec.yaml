@@ -49,7 +49,7 @@ dependencies:
   # Shimmer
   shimmer: ^2.0.0
 
-  # OnBoarding
+  # Introduction Plugin
   introduction_screen: ^2.1.0
 
   # local storage and ToDo List Plugin
