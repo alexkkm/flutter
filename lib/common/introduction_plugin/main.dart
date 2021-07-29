@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning/main.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-void main() => IntroductionApp();
+void main() => IntroductionPlugin();
 
-// ignore: non_constant_identifier_names
-void IntroductionPlugin() => runApp(IntroductionApp());
-
-class IntroductionApp extends StatelessWidget {
+class IntroductionPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(SwitchPageTutorial());
 
-class MyApp extends StatelessWidget {
+class SwitchPageTutorial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Flutter",
       home: Scaffold(
         appBar: AppBar(
           title: Text('change-page'),
