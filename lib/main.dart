@@ -3,6 +3,7 @@ import 'package:flutter_learning/common/common.dart';
 import 'package:flutter_learning/google_signin/main.dart';
 import 'package:flutter_learning/authentication/main.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
+import 'package:flutter_learning/slidable_bar/main.dart';
 import 'package:flutter_learning/to_do_list/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
 import 'package:flutter_learning/local_notification/main.dart';
@@ -33,6 +34,7 @@ class HomePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           switchPageButton(context, "Common", CommonManu()),
+          switchPageButton(context, "Slidable Bar", SlidableBarPlugin()),
           switchPageButton(
               context, "External App launcher", ExternalAppLauncher()),
           switchPageButton(context, "Local Notification", LocalNotification()),
@@ -60,7 +62,7 @@ ElevatedButton switchPageButton(
   return ElevatedButton(
     child: Text(buttonText),
     onPressed: () {
-      debugPrint("Clicked" + buttonText + "Button");
+      debugPrint("Clicked " + buttonText + "Button");
       Navigator.push(context, MaterialPageRoute(builder: (context) => page));
     },
   );
