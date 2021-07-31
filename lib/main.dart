@@ -60,7 +60,7 @@ ElevatedButton switchPageButton(
   return ElevatedButton(
     child: Text(buttonText),
     onPressed: () {
-      debugPrint("Clicked" + buttonText + "Button");
+      debugPrint("Clicked " + buttonText + "Button");
       Navigator.push(context, MaterialPageRoute(builder: (context) => page));
     },
   );
