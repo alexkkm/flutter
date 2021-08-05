@@ -64,8 +64,6 @@ dependencies:
   flutter_signin_button: ^2.0.0
   
   # common
-  floating_search_bar: ^0.3.0
-  material_floating_search_bar: ^0.3.4
   provider: ^5.0.0
   fluttertoast: ^8.0.7
   
