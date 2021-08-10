@@ -68,6 +68,7 @@ dependencies:
   material_floating_search_bar: ^0.3.4
   provider: ^5.0.0
   fluttertoast: ^8.0.7
+  flutter_tesseract_ocr: ^0.4.6
   
   
   
