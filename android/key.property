@@ -1,0 +1,4 @@
+storePassword=testing
+keyPassword=testing
+keyAlias=upload
+storeFile=D:/Users/user/upload-keystore.jks
