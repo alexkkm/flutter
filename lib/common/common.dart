@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/common/introduction_plugin/main.dart';
+import 'package:flutter_learning/common/padding/main.dart';
 import 'package:flutter_learning/common/searching/main.dart';
 import 'package:flutter_learning/common/shimmer/main.dart';
 import 'package:flutter_learning/common/switch_page/switchPage.dart';
@@ -19,6 +20,7 @@ class CommonManu extends StatelessWidget {
           children: <Widget>[
             switchPageButton(context, "Tutorial Documents", TutorialDocument()),
             switchPageButton(context, "Switch Page", SwitchPageTutorial()),
+            switchPageButton(context, "Padding", PaddingPlugin()),
             switchPageButton(context, "Shimmer", ShimmerPlugin()),
             switchPageButton(
                 context, "Introduction Plugin", IntroductionPlugin()),
