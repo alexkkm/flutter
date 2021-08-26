@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/common/common.dart';
-import 'package:flutter_learning/google_signin/main.dart';
-import 'package:flutter_learning/authentication/firebase/main.dart';
+import 'package:flutter_learning/authentication/firebase/google_signin/main.dart';
+import 'package:flutter_learning/authentication/firebase/email/main.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
 import 'package:flutter_learning/to_do_list/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
