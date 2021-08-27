@@ -18,21 +18,21 @@ A personal Flutter App for saving the progress and flutter learning process.
 ---
 ### Essential Setting after clonning the repo into your own device:
 1. Open the file at the location: android/gradle.properties
-2. In the line: <code> org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.12 </code>, change the <code> D:\\Program Files\\Java\\jdk-11.0.12 </code> into the location of your own Java Jdk  
+2. In the line: <code> org.gradle.java.home=C:\\Program Files\\Java\\jdk-11.0.12 </code>, change the <code> C:\\Program Files\\Java\\jdk-11.0.12 </code> into the location of your own Java Jdk  
 (Note that the version of Java jdk should lower then 12)
 ---
 
 ### Settings for running release mode:
 1. run the following code in terminal:
 ```temrinal
-keytool -genkey -v -keystore D:\Users\user\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+keytool -genkey -v -keystore C:\Users\user\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
-NOTE: <code>D:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
+NOTE: <code>C:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
 and set the password as <code>password</code>, type <code>y</code> when asking [<code>No</code>]  
 
 NOTE: To get the SHA01 and SHA256 key, please type the below code in terminal:
 ```
-keytool -alias upload -keystore D:\Users\user\.android.debug.keystore -list -v
+keytool -list -v -keystore "C:\Users\user\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
 ```
 
 2. create a file called <code>key.property</code>, and add the followings code into it:
