@@ -31,7 +31,9 @@ NOTE: <code>D:\Users\user\upload-keystore.jks</code> should be changed according
 and set the password as <code>password</code>, type <code>y</code> when asking [<code>No</code>]  
 
 NOTE: To get the SHA01 and SHA256 key, please type the below code in terminal:
+```
 keytool -alias upload -keystore D:\Users\user\.android.debug.keystore -list -v
+```
 
 2. create a file called <code>key.property</code>, and add the followings code into it:
 ```
