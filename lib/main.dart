@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/authentication/without_firebase/sample.dart';
 import 'package:flutter_learning/common/common.dart';
 import 'package:flutter_learning/authentication/firebase/google_signin/main.dart';
 import 'package:flutter_learning/authentication/firebase/email/main.dart';
@@ -38,7 +39,8 @@ class HomePage extends StatelessWidget {
           switchPageButton(context, "Local Notification", LocalNotification()),
           switchPageButton(context, "Share Inward", ShareInward()),
           switchPageButton(context, "Share Outward", SimpleShareOutward()),
-
+          switchPageButton(
+              context, "Sign in without Firebase", SigninWithoutFirebase()),
           switchPageButton(context, "Local Storage", LocalStoragePlugin()),
           switchPageButton(context, "ToDo List Plugin", ToDoListPlugin()),
           ElevatedButton(

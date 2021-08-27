@@ -10,7 +10,7 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
   // clientId: '479882132969-9i9aqik3jfjd7qhci1nqf0bm2g71rm1u.apps.googleusercontent.com',
   scopes: <String>[
     'email',
-    'https://www.googleapis.com/auth/contacts.readonly',
+    'https://www.google.com/m8/feeds/',
   ],
 );
 
@@ -18,17 +18,17 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Google Sign In',
-      home: SignInDemo(),
+      home: SigninWithoutFirebase(),
     ),
   );
 }
 
-class SignInDemo extends StatefulWidget {
+class SigninWithoutFirebase extends StatefulWidget {
   @override
-  State createState() => SignInDemoState();
+  State createState() => SigninWithoutFirebaseState();
 }
 
-class SignInDemoState extends State<SignInDemo> {
+class SigninWithoutFirebaseState extends State<SigninWithoutFirebase> {
   GoogleSignInAccount? _currentUser;
   String _contactText = '';
 
