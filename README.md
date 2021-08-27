@@ -18,7 +18,7 @@ A personal Flutter App for saving the progress and flutter learning process.
 ---
 ### Essential Setting after clonning the repo into your own device:
 1. Open the file at the location: android/gradle.properties
-2. In the line: <code> org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11 </code>, change the <code> D:\\Program Files\\Java\\jdk-11.0.11 </code> into the location of your own Java Jdk  
+2. In the line: <code> org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.12 </code>, change the <code> D:\\Program Files\\Java\\jdk-11.0.12 </code> into the location of your own Java Jdk  
 (Note that the version of Java jdk should lower then 12)
 ---
 
