@@ -28,7 +28,10 @@ A personal Flutter App for saving the progress and flutter learning process.
 keytool -genkey -v -keystore D:\Users\user\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
 NOTE: <code>D:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
-and set the password as <code>testing</code>, type <code>y</code> when asking [<code>No</code>]  
+and set the password as <code>password</code>, type <code>y</code> when asking [<code>No</code>]  
+
+NOTE: To get the SHA01 and SHA256 key, please type the below code in terminal:
+keytool -alias upload -keystore D:\Users\user\.android.debug.keystore -list -v
 
 2. create a file called <code>key.property</code>, and add the followings code into it:
 ```
