@@ -37,12 +37,12 @@ keytool -list -v -keystore "C:\Users\user\.android\debug.keystore" -alias androi
 
 2. create a file called <code>key.property</code>, and add the followings code into it:
 ```
-storePassword=testing
-keyPassword=testing
+storePassword=android
+keyPassword=android
 keyAlias=upload
-storeFile=D:/Users/user/upload-keystore.jks
+storeFile=C:/Users/user/upload-keystore.jks
 ```
-NOTE: <code>D:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
+NOTE: <code>C:\Users\user\upload-keystore.jks</code> should be changed according to your computer user name  
 
 3. add the following code into <code>android/app/build.gradle</code>:
 ```
@@ -89,7 +89,7 @@ signingConfigs {
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="30" />
 ```
-5. download the jdk 11.0.1 and install it in <code>D:\Program Files\Java\jdk-11.0.11</code>  
+5. download the jdk 11.0.12 and install it in <code>C:\Program Files\Java\jdk-11.0.12</code>  
 6. find the following comment in android/gradle.properties:  
 ```
 org.gradle.jvmargs=-Xmx1536M
@@ -97,7 +97,7 @@ org.gradle.jvmargs=-Xmx1536M
 and replace with:  
 ```
 #org.gradle.jvmargs=-Xmx1536M
-org.gradle.java.home=D:\\Program Files\\Java\\jdk-11.0.11
+org.gradle.java.home=C:\\Program Files\\Java\\jdk-11.0.12
 ```
 NOTE: In gradle.properties:<code>org.gradle.java.home</code> path should be change according to the path you install jdk 11.0.11 in last steps  
 NOTE: gradle.properties should not be add into gitignore, all other files generate above can be gitignore, and generate when need to build release apk
