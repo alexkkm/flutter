@@ -1,4 +1,4 @@
-storePassword=testing
-keyPassword=testing
+storePassword=android
+keyPassword=android
 keyAlias=upload
-storeFile=D:/Users/user/upload-keystore.jks
+storeFile=C:/Users/user/upload-keystore.jks
