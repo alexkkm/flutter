@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/common/background/main.dart';
 import 'package:flutter_learning/common/introduction_plugin/main.dart';
 import 'package:flutter_learning/common/padding/main.dart';
 import 'package:flutter_learning/common/searching/main.dart';
@@ -26,6 +27,7 @@ class CommonManu extends StatelessWidget {
                 context, "Introduction Plugin", IntroductionPlugin()),
             switchPageButton(context, "Searching", SearchingPlugin()),
             switchPageButton(context, "Shimmer", ShimmerPlugin()),
+            switchPageButton(context, "Background", BackgroundPlugin()),
           ],
         ),
       ),
