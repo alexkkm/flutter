@@ -9,14 +9,26 @@ class BackgroundPlugin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Flutter",
+      home: BackgroundPage(),
+    );
+  }
+}
+
+class BackgroundPage extends StatelessWidget {
+  const BackgroundPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Background"),
       ),
       body: Stack(
-        children: <Widget>[
+        children: [
           //Bottom level: Background
-          Container(child: Image.asset("images/flutterbird.png")),
+          Image.asset("images/SmartCampus_Background.png"),
 
           //Top level: Body Content Example
           Column(
