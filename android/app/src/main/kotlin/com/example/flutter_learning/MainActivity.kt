@@ -1,4 +1,4 @@
-package com.example.flutter_learning
+package com.alexkkm.flutter
 
 import android.content.ContentResolver
 import android.content.Context
@@ -23,7 +23,7 @@ class MainActivity : FlutterActivity() {
   override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
     super.configureFlutterEngine(flutterEngine)
     MethodChannel(flutterEngine.dartExecutor.binaryMessenger,
-            "com.example.flutter_learning").setMethodCallHandler { call, result ->
+            "com.alexkkm.flutter").setMethodCallHandler { call, result ->
               if (call.method == "getSharedData") {
                 handleIntent()
                 result.success(sharedData)

@@ -44,17 +44,17 @@ class TutorialDocument extends StatelessWidget {
               ),
               Container(
                 child: const Center(
-                  child: Text("name of the package: com.example.flutter_learning\n" +
+                  child: Text("name of the package: com.alexkkm.flutter\n" +
                       "D:/vscode/flutter/android/app/build.gradle\n" +
-                      "	37,24:         applicationId \"com.example.flutter_learning\"\n" +
+                      "	37,24:         applicationId \"com.alexkkm.flutter\"\n" +
                       "D:/vscode/flutter/android/app/src/debug/AndroidManifest.xml\n" +
-                      "	2,14:     package=\"com.example.flutter_learning\">\n" +
+                      "	2,14:     package=\"com.alexkkm.flutter\">\n" +
                       "D:/vscode/flutter/android/app/src/main/AndroidManifest.xml:\n" +
-                      "	2,14:     package=\"com.example.flutter_learning\">\n" +
+                      "	2,14:     package=\"com.alexkkm.flutter\">\n" +
                       "D:/vscode/flutter/android/app/src/main/kotlin/com/example/flutter_learning/MainActivity.kt\n" +
-                      "	1,9: package com.example.flutter_learning\n" +
+                      "	1,9: package com.alexkkm.flutter\n" +
                       "D:/vscode/flutter/android/app/src/profile/AndroidManifest.xml\n" +
-                      "	2,14:     package=\"com.example.flutter_learning\">\n" +
+                      "	2,14:     package=\"com.alexkkm.flutter\">\n" +
                       "D:/vscode/flutter/ios/Runner.xcodeproj/project.pbxproj\n" +
                       "	294,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;\n" +
                       "	418,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;\n" +

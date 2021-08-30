@@ -5,17 +5,17 @@ D:\vscode\flutter\android\app\src\main\AndroidManifest.xml:
 	4,24:         android:label="flutter_learning"
 
 
-name of the package: com.example.flutter_learning
+name of the package: com.alexkkm.flutter
 D:\vscode\flutter\android\app\build.gradle
-	37,24:         applicationId "com.example.flutter_learning"
+	37,24:         applicationId "com.alexkkm.flutter"
 D:\vscode\flutter\android\app\src\debug\AndroidManifest.xml
-	2,14:     package="com.example.flutter_learning">
+	2,14:     package="com.alexkkm.flutter">
 D:\vscode\flutter\android\app\src\main\AndroidManifest.xml:
-	2,14:     package="com.example.flutter_learning">
+	2,14:     package="com.alexkkm.flutter">
 D:\vscode\flutter\android\app\src\main\kotlin\com\example\flutter_learning\MainActivity.kt
-	1,9: package com.example.flutter_learning
+	1,9: package com.alexkkm.flutter
 D:\vscode\flutter\android\app\src\profile\AndroidManifest.xml
-	2,14:     package="com.example.flutter_learning">
+	2,14:     package="com.alexkkm.flutter">
 D:\vscode\flutter\ios\Runner.xcodeproj\project.pbxproj
 	294,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;
 	418,33: 				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterLearning;
