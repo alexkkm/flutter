@@ -43,6 +43,9 @@ class HomePage extends StatelessWidget {
               context, "Sign in without Firebase", SigninWithoutFirebase()),
           switchPageButton(context, "Local Storage", LocalStoragePlugin()),
           switchPageButton(context, "ToDo List Plugin", ToDoListPlugin()),
+
+          //need to be fixed
+          /*
           ElevatedButton(
               child: Text("Authentication"),
               onPressed: () =>
@@ -50,6 +53,7 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
               child: Text("Google Signin Plugin"),
               onPressed: () => GoogleSigninPlugin()),
+          */
         ],
       ),
     );
