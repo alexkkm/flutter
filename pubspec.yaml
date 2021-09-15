@@ -63,11 +63,10 @@ dependencies:
   google_sign_in: ^5.0.4
   flutter_signin_button: ^2.0.0
   
-  #Slidable
+  # Slidable
   flutter_slidable: ^0.6.0
 
-
-  # common
+  # Basic
   provider: ^5.0.0
   fluttertoast: ^8.0.7
   flutter_tesseract_ocr: ^0.4.6

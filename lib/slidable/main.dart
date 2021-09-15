@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-void main() => runApp(SlidableBarPlugin());
+void main() => runApp(SlidablePlugin());
 
-class SlidableBarPlugin extends StatelessWidget {
+class SlidablePlugin extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

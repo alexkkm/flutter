@@ -174,15 +174,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
-<<<<<<< HEAD
-  flutter_tesseract_ocr:
-    dependency: "direct main"
-    description:
-      name: flutter_tesseract_ocr
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.6"
-=======
   flutter_slidable:
     dependency: "direct main"
     description:
@@ -190,7 +181,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.0"
->>>>>>> flutter/slidable
+  flutter_tesseract_ocr:
+    dependency: "direct main"
+    description:
+      name: flutter_tesseract_ocr
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.6"
   flutter_test:
     dependency: "direct dev"
     description: flutter
