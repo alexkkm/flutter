@@ -23,7 +23,6 @@ class CommonManu extends StatelessWidget {
             switchPageButton(
                 context, "Introduction Plugin", IntroductionPlugin()),
             switchPageButton(context, "Searching", SearchingPlugin()),
-            switchPageButton(context, "Shimmer", ShimmerPlugin()),
           ],
         ),
       ),
