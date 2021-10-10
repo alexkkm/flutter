@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/authentication/firebase/email/main.dart';
+import 'package:flutter_learning/authentication/firebase/google_signin/main.dart';
 import 'package:flutter_learning/authentication/without_firebase/sample.dart';
 import 'package:flutter_learning/common/common.dart';
 //import 'package:flutter_learning/authentication/firebase/google_signin/main.dart';
 //import 'package:flutter_learning/authentication/firebase/email/main.dart';
 import 'package:flutter_learning/external_app_launcher/main.dart';
+import 'package:flutter_learning/project/project.dart';
 import 'package:flutter_learning/slidable/main.dart';
 import 'package:flutter_learning/to_do_list/main.dart';
 import 'package:flutter_learning/share_outward/simple.dart';
@@ -45,9 +48,8 @@ class HomePage extends StatelessWidget {
               context, "Sign in without Firebase", SigninWithoutFirebase()),
           switchPageButton(context, "Local Storage", LocalStoragePlugin()),
           switchPageButton(context, "ToDo List Plugin", ToDoListPlugin()),
+          switchPageButton(context, "Projects", ProjectPage()),
 
-          //need to be fixed
-          /*
           ElevatedButton(
               child: Text("Authentication"),
               onPressed: () =>
@@ -55,7 +57,6 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
               child: Text("Google Signin Plugin"),
               onPressed: () => GoogleSigninPlugin()),
-          */
         ],
       ),
     );
