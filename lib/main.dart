@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/authentication/firebase/email/main.dart';
-import 'package:flutter_learning/authentication/firebase/google_signin/main.dart';
-import 'package:flutter_learning/authentication/without_firebase/sample.dart';
-import 'package:flutter_learning/common/common.dart';
-//import 'package:flutter_learning/authentication/firebase/google_signin/main.dart';
-//import 'package:flutter_learning/authentication/firebase/email/main.dart';
-import 'package:flutter_learning/external_app_launcher/main.dart';
-import 'package:flutter_learning/project/project.dart';
-import 'package:flutter_learning/slidable/main.dart';
-import 'package:flutter_learning/to_do_list/main.dart';
-import 'package:flutter_learning/share_outward/simple.dart';
-import 'package:flutter_learning/local_notification/main.dart';
-import 'package:flutter_learning/share_inward/main.dart';
-import 'package:flutter_learning/local_storage/main.dart';
+import 'package:flutter_learning/Authentication/Firebase/Email/EmailAuthentication.dart';
+import 'package:flutter_learning/Authentication/Firebase/GoogleSignin/GoogleSignin.dart';
+import 'package:flutter_learning/Authentication/WithoutFirebase/sample.dart';
+import 'package:flutter_learning/Common/Common.dart';
+import 'package:flutter_learning/ExternalAppLauncher/ExternalAppLauncher.dart';
+import 'package:flutter_learning/LocalNotification/LocalNotification.dart';
+import 'package:flutter_learning/LocalStorage/LocalStorage.dart';
+import 'package:flutter_learning/Project/Project.dart';
+import 'package:flutter_learning/Slidable/Slidable.dart';
+import 'package:flutter_learning/ToDoList/ToDoList.dart';
+
+import 'ShareInward/ShareInward.dart';
+import 'ShareOutward/SimpleShareOutward.dart';
 
 void main() => runApp(MainApp());
 

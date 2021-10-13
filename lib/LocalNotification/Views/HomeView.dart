@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/local_notification/services/notification.dart';
+import 'package:flutter_learning/LocalNotification/Services/NotificationService.dart';
 import 'package:provider/provider.dart';
 import 'package:timezone/data/latest.dart' as tz; //for tz.initializeTimeZones()
 
-class HomePage extends StatefulWidget {
+class NotificationHomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _NotificationHomePageState createState() => _NotificationHomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _NotificationHomePageState extends State<NotificationHomePage> {
   //initialize the Notification Service and TimeZone Plugin
   @override
   void initState() {

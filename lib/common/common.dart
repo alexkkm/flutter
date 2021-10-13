@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/common/background/main.dart';
-import 'package:flutter_learning/common/introduction_plugin/main.dart';
-import 'package:flutter_learning/common/padding/main.dart';
-import 'package:flutter_learning/common/searching/main.dart';
-import 'package:flutter_learning/common/shimmer/main.dart';
-import 'package:flutter_learning/common/switch_page/switchPage.dart';
-import 'package:flutter_learning/common/tutorial_documents/tutorial.dart';
+import 'package:flutter_learning/Common/Introduction/Introduction.dart';
+import 'package:flutter_learning/Common/Padding/Padding.dart';
+import 'package:flutter_learning/Common/Searching/Searching.dart';
+import 'package:flutter_learning/Common/Shimmer/Shimmer.dart';
+import 'package:flutter_learning/Common/SwitchPage/SwitchPage.dart';
+import 'package:flutter_learning/Common/TutorialDocuments/tutorial.dart';
+import 'package:flutter_learning/Common/Background/Background.dart';
 
 void main() => runApp(CommonManu());
 

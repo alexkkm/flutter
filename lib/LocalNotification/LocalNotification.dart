@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'services/notification.dart';
-import 'views/home_view.dart';
+import 'package:flutter_learning/LocalNotification/Services/NotificationService.dart';
+import 'package:flutter_learning/LocalNotification/Views/HomeView.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class LocalNotification extends StatelessWidget {
     return MultiProvider(
         child: MaterialApp(
           title: "Flutter",
-          home: HomePage(),
+          home: NotificationHomePage(),
           debugShowCheckedModeBanner: false,
         ),
         providers: [
