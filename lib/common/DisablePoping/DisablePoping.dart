@@ -28,7 +28,8 @@ class MyHomePage extends StatelessWidget {
               MaterialPageRoute(builder: (context) => DisablePage()),
               (route) => disableBackPage);
         },
-        child: Text("text"));
+        child:
+            Text("Change Page with disable back page function in next page"));
   }
 }
 
