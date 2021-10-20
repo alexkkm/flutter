@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(DisablePopingPlugin());
+void main() {
+  disablePopingPlugin();
+}
+
+void disablePopingPlugin() {
+  runApp(MaterialApp(
+      title: 'Flutter',
+      home: Scaffold(
+        body: PageDisabled(),
+      )));
+}
 
 /// This is the main application widget.
-class DisablePopingPlugin extends StatelessWidget {
-  const DisablePopingPlugin({Key? key}) : super(key: key);
+class PageDisabled extends StatelessWidget {
+  const PageDisabled({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter';
 

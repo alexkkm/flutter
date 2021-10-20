@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/Common/DisablePoping/DisablePoping.dart';
 import 'package:flutter_learning/Common/Introduction/Introduction.dart';
 import 'package:flutter_learning/Common/Padding/Padding.dart';
 import 'package:flutter_learning/Common/Searching/Searching.dart';
@@ -27,6 +28,9 @@ class CommonManu extends StatelessWidget {
                 context, "Introduction Plugin", IntroductionPlugin()),
             switchPageButton(context, "Searching", SearchingPlugin()),
             switchPageButton(context, "Background", BackgroundPlugin()),
+            ElevatedButton(
+                child: Text("Disable Poping Plugin"),
+                onPressed: () => disablePopingPlugin()),
           ],
         ),
       ),
@@ -40,7 +44,7 @@ ElevatedButton switchPageButton(
   return ElevatedButton(
     child: Text(buttonText),
     onPressed: () {
-      debugPrint("Clicked" + buttonText + "Button");
+      debugPrint("Clicked " + buttonText + "Button");
       Navigator.push(context, MaterialPageRoute(builder: (context) => page));
     },
   );
